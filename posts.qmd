@@ -1,0 +1,16 @@
+---
+title: "posts.qmd"
+---
+
+---
+title: "Analysis Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+---
+
+This blog documents the iterative development of perioperative risk prediction models using the INSPIRE dataset. Each post represents a step in the analysis pipeline, showing both the methodology and the results.

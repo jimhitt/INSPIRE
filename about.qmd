@@ -1,0 +1,29 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/YOUR_USERNAME/
+    - icon: github
+      text: Github
+      href: https://github.com/YOUR_USERNAME
+---
+
+## About This Project
+
+I'm a physician data scientist developing machine learning models for perioperative risk prediction. This project uses the INSPIRE dataset (130,000+ surgical cases) to build tools that can improve surgical outcomes.
+
+## Why Public?
+
+I believe in transparent, reproducible research. This blog shows the complete analysis process - not just polished final results.
+
+## Technical Stack
+
+-   **Data**: INSPIRE dataset (PhysioNet)
+-   **Analysis**: R, Python, DuckDB
+-   **ML**: XGBoost, LSTM/RNN
+-   **Documentation**: Quarto, GitHub
+-   **IDE**: Positron

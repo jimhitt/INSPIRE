@@ -1,0 +1,26 @@
+---
+title: "INSPIRE Perioperative Risk Analysis"
+---
+
+## Overview
+
+This project develops machine learning models for predicting surgical adverse events using the INSPIRE dataset (130,000+ surgical cases from Seoul National University Hospital, 2011-2020).
+
+## Goals
+
+1.  Define composite adverse outcomes beyond mortality alone
+2.  Establish proper baseline validation using clinical risk scores\
+3.  Demonstrate incremental value of intraoperative hemodynamic data
+4.  Apply temporal pattern recognition (LSTM) to vital signs
+
+## Approach
+
+This is an **open, iterative analysis** showing the complete research process - not just polished results. Each blog post documents a step in the analysis pipeline.
+
+## Dataset
+
+INSPIRE v1.3 from PhysioNet: <https://physionet.org/content/inspire/1.3/>
+
+## Recent Posts
+
+See the [Analysis Blog](posts.qmd) for detailed analysis posts.

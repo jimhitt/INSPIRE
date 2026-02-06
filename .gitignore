@@ -1,0 +1,36 @@
+# Data files (PHI - never commit)
+data/
+PHI_*
+**/PHI_*
+
+# Large output files (except SAFE_ prefixed)
+output/*.rds
+output/*.csv
+!output/**/SAFE_*.csv
+!output/**/SAFE_*.png
+!output/**/SAFE_*.html
+
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# renv
+renv/library/
+renv/local/
+renv/staging/
+
+# Quarto
+/.quarto/
+/_site/
+/_freeze/
+
+# macOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+~$*
+**/*.quarto_ipynb

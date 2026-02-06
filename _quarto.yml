@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "INSPIRE Perioperative Risk Analysis"
+  description: "Engineering solutions for surgical risk prediction"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: posts.qmd
+        text: Analysis Blog
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/jimhitt/INSPIRE
+      - icon: linkedin
+        href: https://www.linkedin.com/in/jim-hitt-mdphd/
+        
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    code-tools: true
+    code-copy: true
+
+execute:
+  freeze: auto
