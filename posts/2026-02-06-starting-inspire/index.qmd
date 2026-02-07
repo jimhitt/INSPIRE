@@ -1,0 +1,92 @@
+---
+title: "Starting INSPIRE: Building Perioperative Risk Models in the Open"
+author: "Jim Hitt"
+date: "2026-02-06"
+categories: [meta, setup, tools]
+image: ""
+draft: false
+---
+
+## Why This Project?
+
+I'm a physician data scientist on a mission to show what can be done with health data, not just talk about data science in the abstract. I am building a complete perioperative risk prediction project in the open, sharing both the polished results and the messy process of getting there.
+
+The dataset is [INSPIRE](https://physionet.org/content/inspire/1.3/), a public research dataset of 130,000+ surgical cases from Seoul National University Hospital (2011-2020). It includes everything needed for comprehensive perioperative research: demographics, preoperative labs, intraoperative vitals at 5-minute intervals, postoperative labs, medications, and outcomes including mortality, ICU admission, and in-hospital complications.
+
+## The Goal
+
+My plan is to develop a three-phase analysis:
+
+1.  **Establish proper baselines** - Develop preoperative risk prediction models and compare them classic risk scores (ASA, Elixhauser, POSSUM) with rigorous cross-validation to establish realistic performance benchmarks. Showing some of the challenges in using ML or AI for risk prediction along the way.
+2.  **Add intraoperative data** - Incorporate hemodynamic features (MAP, HR variability, hypotension burden) to quantify the incremental value of real-time surgical data
+3.  **Temporal pattern recognition** - Use LSTM models on 5-minute vital signs sequences to identify critical intraoperative periods
+
+But first, I need to set up the infrastructure to do this work properly.
+
+## Working with Claude: The Experience
+
+I've been using Claude (Anthropic's AI assistant) as a development partner for this project setup, and it's been surprisingly effective. Not because Claude writes perfect code—it doesn't—but because it accelerates the iterative process of getting things *almost* right, then fixing the gaps. I have discovered the importance of accurate prompting and careful evaluation of the response to fine tune it. It has also been interesting to use AI assistance for a healthcare research project. While these public datasets have been deidentified, they still must be treated as PHI. So it is important to shield the potentially sensitive data from the model, while sharing aggregate outputs (like I am doing on this blog). These are the real-world challenges of data science and AI development in the healthcare arena.
+
+### What Claude Did Well
+
+**Environment setup**: Within minutes, Claude helped me initialize a Quarto blog, connect it to GitHub, and set up proper data protection (PHI\_*.csv files in .gitignore, SAFE\_* prefix for public outputs). This would have taken me hours of reading documentation.
+
+**RStudio workflow design**: Claude understood my constraint ("I need to keep exploratory R scripts separate from polished blog posts") and created a clean directory structure:
+
+```         
+INSPIRE/
+├── R/              # Sequential analysis scripts
+├── posts/          # Blog posts documenting findings
+├── output/         # Results (SAFE_* for public sharing)
+├── data/           # PHI data (gitignored)
+└── [Quarto files]
+```
+
+**Learning Quarto syntax**: I've never used Quarto before. Claude showed me how to embed R code, render plots, create cross-references, and manage YAML headers. I'm now comfortable enough to write posts without constantly checking documentation.
+
+### What Required Human Judgment
+
+**Data protection decisions**: Claude suggested .gitignore rules, but I had to decide *which* files truly contained PHI and *how* to label public outputs (the SAFE\_\* prefix convention).
+
+**Analytical approach**: Claude offered standard statistical methods, but I added my clinical knowledge to look at KDIGO criteria for AKI, CKD-EPI 2021 for eGFR, and a composite outcome to improve statistical power beyond mortality alone (1.2% event rate → 15-18%).
+
+**Clinical context**: When Claude suggested troponin cutoffs, I explained why selective testing in only 5.8% of patients matters—it's not random, it's clinically driven. The model needs to account for this selection bias.
+
+## The Philosophy: Show Your Work
+
+Most data science portfolios show polished final results. I'm doing the opposite: showing the *process*. This blog will document:
+
+-   How I define clinical outcomes (with code)
+-   Why I choose specific analytical methods (with references)
+-   What goes wrong and how I fix it (with git commits)
+-   How results change when methods improve (with version control)
+
+This serves two purposes:
+
+1.  **Transparency**: Anyone can reproduce my work and verify my claims
+2.  **Portfolio**: Potential collaborators can see exactly how I work
+
+## What's Next
+
+My next post will dive into defining composite adverse outcomes for the INSPIRE dataset. I will post the development in small iterations, explaining what is going on in that step, so you can follow along even if these are new concepts. The best way to learn something is to teach it!
+
+Here is the roadmap for the next steps:
+
+-   Baseline demographics of the population and handling subjects with multiple operations.
+-   Mortality prediction based on preoperative demographics and laboratory values, like the INSPIRE authors published.
+-   Acute kidney injury (KDIGO criteria + eGFR-based definitions)
+-   Perioperative myocardial injury (troponin elevation with selective testing)
+-   ICU admission and mortality
+-   Expected composite event rate: 15-18% (vs 1.2% for mortality alone)
+
+This gives far better statistical power for model development and is more clinically meaningful—we care about *all* major complications, not just death.
+
+## Try This Yourself
+
+The INSPIRE dataset is free and public (requires PhysioNet credentialing and a Data Use Agreement). If you want to work with perioperative data, this is an excellent resource—far better coverage of rare outcomes than most single-institution datasets.
+
+The code for this project will be available on [GitHub](https://github.com/jimhitt/INSPIRE) as I develop it. Right now it's just the skeleton, but check back soon for actual analysis.
+
+------------------------------------------------------------------------
+
+*Jim is a physician data scientist building perioperative risk prediction models using public datasets. This blog documents the complete development process, including technical decisions, code, and clinical reasoning.*
