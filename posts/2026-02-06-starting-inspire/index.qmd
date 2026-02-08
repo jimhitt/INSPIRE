@@ -3,7 +3,7 @@ title: "Starting INSPIRE: Building Perioperative Risk Models in the Open"
 author: "Jim Hitt"
 date: "2026-02-06"
 categories: [meta, setup, tools]
-image: ""
+image: "output/ScienceCat.png"
 draft: false
 ---
 
