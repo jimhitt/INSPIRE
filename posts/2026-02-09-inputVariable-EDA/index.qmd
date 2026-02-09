@@ -4,7 +4,7 @@ description: "Exploratory analysis of preoperative laboratory values for the fir
 author: "Jim Hitt"
 date: "2026-02-09"
 categories: [INSPIRE, EDA, Labs, Baseline]
-image: "preview.png"
+image: "figure01_lab_distributions.png"
 format:
   html:
     code-fold: true
