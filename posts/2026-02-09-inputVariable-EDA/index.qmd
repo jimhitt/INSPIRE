@@ -75,17 +75,6 @@ The INSPIRE dataset has outstanding preoperative lab availability.
 
 This table shows that 86-99% of operations have preoperative values for each test within the 6-month lookback window. This is typical of a well-resourced academic medical center with comprehensive preoperative evaluation protocols.
 
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-#html_lines = readLines("../../output/02_preop_labs/table01_lab_summary.html")
-#body_start <- which(grepl("<body", html_lines))
-#body_end <- which(grepl("</body>", html_lines))
-#table_content <- html_lines[(body_start + 1):(body_end - 1)]
-#cat(table_content, sep = "\n")
-```
-
 ```{=html}
 <iframe src="table01_lab_summary.html" width="100%" height="800px" frameborder="0"></iframe>
 ```
@@ -100,16 +89,6 @@ This table shows that 86-99% of operations have preoperative values for each tes
 
 Detailed descriptive statistics for all 13 preoperative labs.
 
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-#html_lines = readLines("../../output/02_preop_labs/table02_lab_descriptive_stats.html")
-#body_start <- which(grepl("<body", html_lines))
-#body_end <- which(grepl("</body>", html_lines))
-#table_content <- html_lines[(body_start + 1):(body_end - 1)]
-#cat(table_content, sep = "\n")
-```
 
 ```{=html}
 <iframe src="table02_lab_descriptive_stats.html" width="100%" height="800px" frameborder="0"></iframe>
@@ -129,13 +108,13 @@ Detailed descriptive statistics for all 13 preoperative labs.
 
 Lab distributions with with kernel density estimates.
 
-![Distribution of preoperative laboratory values with density curves. Dashed red lines indicate Q1 and Q3. Notice the characteristic right-skew in liver enzymes (AST, ALT) and some expected bimodal patterns in glucose (diabetic vs non-diabetic patients).](../../output/02_preop_labs/figure01_lab_distributions.png){#fig-distributions}
+![Distribution of preoperative laboratory values with density curves. Dashed red lines indicate Q1 and Q3. Notice the characteristic right-skew in liver enzymes (AST, ALT) and some expected bimodal patterns in glucose (diabetic vs non-diabetic patients).](figure01_lab_distributions.png){#fig-distributions}
 
 Distribution of preoperative laboratory values with density curves. Dashed red lines indicate Q1 and Q3. Notice the characteristic right-skew in liver enzymes (AST, ALT) and some expected bimodal patterns in glucose (diabetic vs non-diabetic patients).
 
 This is the same data normalized to z-scores, allowing direct comparison of outlier patterns across labs.
 
-![Normalized laboratory values (z-scores) showing outlier patterns. All labs are on the same scale to facilitate comparison. Reference lines at ±3 SD mark extreme outliers. Median values for each lab are shown on the left.](../../output/02_preop_labs/figure02_lab_boxplots_normalized.png){#fig-boxplots}
+![Normalized laboratory values (z-scores) showing outlier patterns. All labs are on the same scale to facilitate comparison. Reference lines at ±3 SD mark extreme outliers. Median values for each lab are shown on the left.](figure02_lab_boxplots_normalized.png){#fig-boxplots}
 
 Normalized laboratory values (z-scores) showing outlier patterns. All labs are on the same scale to facilitate comparison. Reference lines at ±3 SD mark extreme outliers. Median values for each lab are shown on the left.
 

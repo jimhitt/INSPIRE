@@ -272,4 +272,4 @@ All outputs are reproducible from the public INSPIRE dataset.
 
 ---
 
-*This is post 2 of the INSPIRE perioperative risk prediction series. [Previous: Project Setup](../2026-02-06-starting-inspire/) | Next: Baseline Demographics (coming soon)*
+*This is post 2 of the INSPIRE perioperative risk prediction series. [Previous: Project Setup](../2026-02-06-starting-inspire/) | [Next: Input Variable EDA](../2026-02-09-inputVariable-EDA/)
