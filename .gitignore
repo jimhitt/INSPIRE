@@ -45,3 +45,8 @@ renv/cellar/
 renv/lock/
 renv/python/
 renv/staging/
+
+# Python
+Python/.venv/
+Python/__pycache__/
+Python/*.pyc

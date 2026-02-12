@@ -491,6 +491,6 @@ message(paste(sprintf("Our cohort size: %d\n", nrow(model_data_labs))),
 
 # Save model data with labs ----------------------------------------------------
 
-saveRDS(model_data_labs, 'output/PHI_modelData_v01.rds')
+saveRDS(model_data_labs, 'data/PHI_modelData_v01.rds')
 
 

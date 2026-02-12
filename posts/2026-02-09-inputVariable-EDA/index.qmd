@@ -222,4 +222,6 @@ The INSPIRE dataset is publicly available on [PhysioNet](https://physionet.org/c
 
 **Transparency builds trust.** We found discrepancies with the published data and explore these differences as we continue with the analysis. This is more valuable than hiding problems to claim perfect replication, and we may discover the reason for the difference as we complete the analysis.
 
-*Next post: "Reproducing AUROC 0.944: What Happens with Proper Cross-Validation"*
+[Previous: Project Setup](../2026-02-09-inputVariable-EDA/) 
+
+*Next post: "Reproducing AUROC 0.944: What Happens with Proper Cross-Validation"* ... coming soon
