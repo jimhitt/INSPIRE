@@ -201,10 +201,10 @@ Why? Because with a single ordinal predictor, there are no additional patterns t
 
 ```
 Input: ASA class (discrete: 1, 2, 3, 4, 5)
-      ↓
+      
 LR:   Estimates 5 parameters (one coefficient per level)
       Captures: linear trend across levels
-      ✓ Done. No more patterns exist.
+      No more patterns exist.
       
 XGB:  Builds 100 trees trying to find non-linearity, interactions...
       Finds: Nothing new. ASA is already fully specified by 5 categories.
@@ -339,26 +339,13 @@ This is more valuable than claiming perfect replication or hiding complications.
 
 ## References & Further Reading
 
-:::{.callout-note}
-### Your reference section
 
-Consider adding citations to:
-- ASA classification papers (original and modern validation)
-- Cross-validation best practices
-- Any methodological papers you referenced
-- Your previous INSPIRE blog posts
 
-*Add references*
-:::
+**Next post:**
 
----
-
-**Next post:** *"From 0.802 to 0.92: How Preoperative Labs Transform ASA-Only Baseline"*
-
-We'll add the 13 preoperative laboratory values and watch AUROC jump. You'll see:
+I will add the 13 preoperative laboratory values with prediction performance gains.
 - Feature importance (which labs matter most?)
 - How XGBoost begins to outperform logistic regression
 - Calibration curves showing prediction quality
 - Clinical interpretation of feature contributions
 
-See you there!
