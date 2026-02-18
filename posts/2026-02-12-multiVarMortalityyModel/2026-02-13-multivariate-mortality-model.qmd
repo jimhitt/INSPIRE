@@ -4,7 +4,7 @@ description: "Systematic progression from simple demographics to full feature se
 author: "Jim Hitt"
 date: "2026-02-13"
 categories: [INSPIRE, Modeling, Mortality, Feature Engineering, Validation]
-image: "Figure01_ROC_curves.png"
+image: "Fig01_ROCcurves.png"
 format:
   html:
     code-fold: true
