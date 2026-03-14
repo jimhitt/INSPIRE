@@ -38,11 +38,11 @@ library(scales)
 # Note: PHI data stored locally, never committed to GitHub
 
 # load data from 01_multiple_operations.R
-first_operations = readRDS("data/PHI_first_operations.rds")
+data_dir = '/Volumes/ResearchDATA_v1/INSPIRE/data'
+first_operations = readRDS(file.path(data_dir,"PHI_first_operations.rds"))
 
 con <- dbConnect(duckdb::duckdb(), dbdir = ":memory:")
 
-data_dir = "data"
 ops_file = "PHI_labs.csv"
 ops_path = file.path(data_dir, ops_file)
 

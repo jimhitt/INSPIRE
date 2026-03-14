@@ -77,7 +77,9 @@ library(gt)
 # Setup ------------------------------------------------------------------------
 set.seed(42)  # For reproducibility
 
-model_data = readRDS('data/PHI_modelData_v01.rds')
+data_dir = '/Volumes/ResearchDATA_v1/INSPIRE/data'
+model_data = readRDS(file.path(data_dir,'PHI_modelData_v01.rds'))
+
 
 #quick data check
 glimpse(model_data)
@@ -282,6 +284,9 @@ model_data <- model_data %>%
                  NA_real_)
   )
 
+# save model data with corrected height, weight, BMI
+data_dir = '/Volumes/ResearchDATA_v1/INSPIRE/data'
+saveRDS(model_data,file.path(data_dir, "PHI_modelData_v02.rds"))
 
 # Modeling ----------------------------------------------------------------
 library(tidyverse)
